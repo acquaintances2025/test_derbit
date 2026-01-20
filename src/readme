@@ -1,0 +1,42 @@
+├── src/
+│   ├── application/        # Обработчик запросов пользователя
+│   │   ├── __init__.py     # Инициация методов
+│   │   ├── path.py         # Используемые пути приложения
+│   │   ├── router.py       # 
+│   │   └── views.py
+│   ├── config/             # Модели данных (Mongoose для MongoDB)
+│   │   └── settings.py
+│   ├── domain/             # Маршруты API
+│   │   ├── __init__.py
+│   │   └── base.py
+│   ├── infrastructure/      # Промежуточные слои (аутентификация, валидация)
+│   │   ├── core/
+│   │   │   └── app.py
+│   │   ├── course_parser/
+│   │   │   └── get_course.py
+│   │   ├── database/
+│   │   │   ├── db/
+│   │   │   │    └── connection.py
+│   │   │   ├── models/
+│   │   │   │    ├── query_models
+│   │   │   │    │    └── courses_entity.py
+│   │   │   │    ├── request_models
+│   │   │   │    │    └── sql_request.py
+│   │   │   │    ├── table_models
+│   │   │   │    │    └── courses_table.py
+│   │   │   │    └── base.py
+│   │   │   └── repositories/
+│   │   │       └── base.py
+│   │   ├── loggers/
+│   │   │   ├── create_loger.py
+│   │   │   └── logger.py
+│   │   ├── proxy/
+│   │   │   └── proxy_client.py
+│   │   └── __init__.py
+│   ├── .env        # Бизнес-логика (сервисы для работы с данными)
+│   ├── .gitignore/           # Вспомогательные утилиты (конфиги, helpers)
+│   ├── app.py
+│   └── requirements.txt
+├── docker-compose.yml              # Конфигурационные файлы (DB, env)
+├── Dockerfile              # Тесты (unit, integration)
+└── README.md            # Это мы
